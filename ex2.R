@@ -26,3 +26,7 @@ subset(y,新生註冊率<60,select=c('短校名','新生註冊率'))
 z=y %>% filter(新生註冊率<60) %>% select(短校名,新生註冊率)
 z=y %>% arrange(desc(新生註冊率)) %>% select(短校名,新生註冊率)
 tail(z)
+bad10=tail(z,n=10)
+summary(z)
+boxplot(z$新生註冊率)
+
